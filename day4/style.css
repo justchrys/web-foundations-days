@@ -1,0 +1,109 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Light theme colours */
+:root {
+  --bg: #f2f4f8;
+  --text: #222222;
+  --card: #ffffff;
+  --border: #999999;
+  --button-bg: #2b3a67;
+  --button-text: #ffffff;
+  --warning: #e67e00;
+  --danger: #d00000;
+}
+
+/* Dark theme: only the variables change */
+body.dark {
+  --bg: #121826;
+  --text: #e6e9f2;
+  --card: #1c2438;
+  --border: #5b6785;
+  --button-bg: #8fa3e8;
+  --button-text: #121826;
+  --warning: #ffb347;
+  --danger: #ff6b6b;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.6;
+  color: var(--text);
+  background-color: var(--bg);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+main {
+  max-width: 700px;
+  margin: 32px auto;
+  padding: 20px;
+  background-color: var(--card);
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: bold;
+}
+
+textarea {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  font: inherit;
+  color: var(--text);
+  background-color: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  resize: vertical;
+}
+
+#char-count,
+#word-count {
+  margin: 8px 0 0;
+}
+
+/* Character counter states */
+.warning {
+  color: var(--warning);
+}
+
+.over {
+  color: var(--danger);
+  font-weight: bold;
+}
+
+.controls {
+  display: flex;
+  gap: 12px;
+  margin-top: 16px;
+}
+
+button {
+  padding: 10px 20px;
+  font: inherit;
+  color: var(--button-text);
+  background-color: var(--button-bg);
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+button:hover {
+  opacity: 0.85;
+  transform: translateY(-2px);
+}
+
+@media (max-width: 600px) {
+  main {
+    margin: 12px;
+    padding: 14px;
+  }
+}
