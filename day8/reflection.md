@@ -1,0 +1,7 @@
+# Reflection
+
+**The most difficult concept.** The hardest idea in the course was thinking about a system at scale, especially what happens when many people act at the same moment. Code that works for one user is easy to picture, but a seat that looks free to two buyers at once was not. In TicketHub I overcame this by working through the numbers step by step and then testing small SQL queries. I learned that checking a seat and then updating it leaves a gap, while one atomic UPDATE inside a transaction, backed by constraints, closes it. Git was also hard at first: I accidentally created a repository in my home folder, so unrelated files reached GitHub. I started again with a clean repository for each project and now run `git status` before every `git add`.
+
+**What I would improve.** Feedback on my scaling work said it did not clearly show how asynchronous jobs are confirmed or what happens when services fail, and it suggested uploading files directly with pre-signed URLs. In my capstone architecture I would add a failure section: job status fields, retries, a dead-letter queue, and what the user sees when something breaks. I would also keep my documents shorter, with a summary at the top, so the key points are easy to find.
+
+**What I will learn next.** I want to learn a real database such as PostgreSQL, including locking and transactions in more depth. After that I will build a backend with Node.js and Express so that my API design becomes a working service, then learn how to deploy and monitor it.
